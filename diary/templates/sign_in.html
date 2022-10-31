@@ -1,0 +1,16 @@
+<!-- sign_in.html -->
+{% extends "base.html" %}
+{% block title %}Title - SignIn{% endblock %}
+{% block description %}Description - SignIn
+Welcome! {{user}}!
+
+{% if user %}
+{{ "Dear. " + user }}!
+{% elif not user %}
+"Dear. Anonymous! "
+{% else %}
+"Hacker"
+{%endif %}
+
+<script src="{{url_for('static', filename='index.js')}}"></script>
+{% endblock %}
